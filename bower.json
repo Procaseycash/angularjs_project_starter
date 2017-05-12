@@ -1,21 +1,15 @@
 {
-  "name": "leo-web",
+  "name": "angularjs_project_starter",
   "authors": [
-    "KazeemOla <kezyolanipekun@gmail.com>",
-    "Uche Mammah",
-    "Convenant",
-    "Chinelu"
+    "Kazeem Olanipekun <kezyolanipekun@gmail.com>"
   ],
-  "description": "WastePal, Recycling, Maintenance, Reporting",
+  "description": "This is design to be used for new angular project in a more concise way",
   "main": "",
   "keywords": [
-    "Managment",
-    "Recycling",
-    "Maintenance",
-    "Facilities",
-    "Sales",
-    "Advertising",
-    "improvement"
+    "Educating",
+    "Management",
+    "Project",
+    "Ease"
   ],
   "license": "MIT",
   "homepage": "",

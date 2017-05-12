@@ -1,7 +1,7 @@
 {
-  "name": "leo-web",
+  "name": "angularjs_project_starter",
   "version": "1.0.0",
-  "description": "WastePal, Recycling, Maintenance, Reporting",
+  "description": "This is design to be used for new angular project in a more concise way",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,25 +9,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/WastePal/leo-web.git"
+    "url": "git+https://github.com/Procaseycash/angularjs_project_starter.git"
   },
   "keywords": [
-    "education",
-    "screening",
-    "management",
-    "admission"
+    "Educating",
+    "Management",
+    "Project",
+    "Ease"
   ],
   "authors": [
-    "Kazeem Olanipekun <kezyolanipekun@gmail.com>",
-    "Uche Mammah",
-    "Convenant",
-    "Chinelu"
+    "Kazeem Olanipekun <kezyolanipekun@gmail.com>"
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/WastePal/leo-web/issues"
+    "url": "https://github.com/Procaseycash/angularjs_project_starter/issues"
   },
-  "homepage": "https://gitlab.com/WastePal/leo-web#README",
+  "homepage": "https://github.com/Procaseycash/angularjs_project_starter#README",
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.1",
