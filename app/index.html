@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="efiweWeb" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="efiweWeb" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="efiweWeb" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="efiweWeb" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Efiwe</title>
+  <meta name="keywords" content="education, institution, management, books, send, donation">
+  <meta name="description" content="education, institution, management, books, send, donation">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="author" content="Efiwe">
+  <meta name="owner" content="Efiwe Inc">
+  <meta name="verified by" content="Efiwe">
+  <meta name="googlebot" content="noodp">
+  <meta name="google" content="translate">
+  <meta name="revisit-after" content="1 month">
+  <!-- build:css css/main.css-->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+  <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+  <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css" />
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.css" />
+  <link rel="stylesheet" href="bower_components/iCheck/skins/flat/blue.css" />
+  <!--endbower-->
+  <!--custom:css-->
+  <link rel="stylesheet" href="app.css">
+  <!-- endcustom  css-->
+  <!-- endbuild -->
+  <link rel="shortcut icon" href="images/efiwe.ico" type='image/x-icon'/>
+  <link rel="icon" href="images/efiwe.ico" type="image/x-icon"/>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body data-ng-controller="efiweWebCtrl" class="nav-md footer_fixed">
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <data data-ui-view ng-cloak></data>
+
+  <!-- build:js js/vendors.js-->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+  <script src="bower_components/angular-ui-select/dist/select.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="bower_components/pdfmake/build/pdfmake.js"></script>
+  <script src="bower_components/pdfmake/build/vfs_fonts.js"></script>
+  <script src="bower_components/bootstrap-progressbar/bootstrap-progressbar.js"></script>
+  <script src="bower_components/iCheck/icheck.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+
+  <!-- build:js js/main.js-->
+  <!-- code inclusion-->
+  <!--Load all Shared Library-->
+  <script src="scripts/shared/ApiHandler.js"></script>
+  <script src="scripts/shared/checkEmail.js"></script>
+  <script src="scripts/shared/cache.js"></script>
+  <script src="scripts/shared/alert.js"></script>
+  <script src="scripts/shared/verifyPageAccess.js"></script>
+  <script src="scripts/shared/tokenMsg.js"></script>
+  <script src="scripts/shared/contentInjecter.js"></script>
+  <script src="scripts/shared/tagList.js"></script>
+  <script src="scripts/shared/paginator.js"></script>
+  <script src="scripts/shared/file_upload.js"></script>
+  <script src="scripts/shared/convertDate.js"></script>
+  <script src="scripts/shared/textCapitalize.js"></script>
+  <script src="scripts/shared/encryption.js"></script>
+  <script src="scripts/shared/interceptors.js"></script>
+  <!--Load all Shared Library-->
+  <!--Load all working script-->
+  <script src="scripts/index.js"></script>
+  <script src="scripts/login/login.js"></script>
+
+  <!--Load all working script-->
+  <script src="app.js"></script>
+  <!--end inclusion -->
+  <!-- endbuild -->
+
+</body>
+</html>

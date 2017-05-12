@@ -1,0 +1,40 @@
+<div class="col-sm-12">
+    <div class="callout callout-info" id="callout-glyphicons-dont-mix">
+        <h4>You can add more than one {{title}}</h4>
+        <p>Before Hitting save <button data-uib-tooltip="Button" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-floppy-disk"></span></button>, You can continue adding as much as you want.
+        </p>
+    </div>
+    <div data-ng-if="data.length>0" class="row">
+        <ul data-ng-if="data!=undefined && data.length>0" class="tagList">
+            <li data-ng-repeat="(key,value) in data track by $index">
+        <span>
+            {{value[fieldA]}}
+            <span  data-ng-if="fieldB!=undefined">
+                -{{value[fieldB]}}
+            </span>
+            </span>
+                <a data-ng-click="deleteTagged(key)" role="button">
+                    <span class="glyphicon glyphicon-remove pull-right" style="font-size:12px; color:#172D44"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+<form id="instituteCreation" class="form-inline" role="form" style="margin:0;">
+        <div class="form-group">
+                                  <span class="input-group" style="margin-right:0;">
+                        <input data-ng-model="edit[fieldA]" name="code" data-ng-required="{{allowField}}" type="text" class="form-control" id="code" placeholder="Enter {{title}} {{fieldA}}">
+                                       <span data-ng-if="fieldB==undefined" class="input-group-btn">
+                        <button data-ng-click="addTag(edit[fieldA],edit[fieldB])" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-plus-sign"></span> Add</button>
+                              </span>
+                        </span>
+        </div>
+        <div class="form-group" data-ng-if="fieldB!=undefined">
+                                 <span class="input-group" style="margin-top:5px;">
+                            <input data-ng-model="edit[fieldB]" name="name" data-ng-required="{{allowField}}" type="text" class="form-control" id="name" placeholder="Enter {{title}} {{fieldB}}">
+                           <span class="input-group-btn">
+                        <button  data-ng-click="addTag(edit[fieldA],edit[fieldB])"  class="btn btn-primary" type="button"><span class="glyphicon glyphicon-plus-sign"></span> Add</button>
+                              </span>
+                        </span>
+        </div>
+    </form>
+</div>

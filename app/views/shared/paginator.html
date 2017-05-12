@@ -1,0 +1,22 @@
+<nav aria-label="Page navigation" align="center">
+    <ul class="pagination">
+        <li data-ng-class="{disabled:!navigators.prev.state}">
+            <a href="javascript:void(0);" aria-label="Previous" data-ng-click="prev()">
+                <span aria-hidden="true">«</span>
+            </a>
+        </li>
+        <li data-ng-repeat="page in pages" data-ng-class="{active:page.active}" data-ng-disabled="page.active">
+            <a href="javascript:void(0);" data-ng-click="setPageActive(page.page)">{{page.page}}</a>
+        </li>
+        <li data-ng-if="async && data.length < total">
+            <a href="javascript:void(0);" data-ng-click="asyncMethod()" data-uib-tooltip="Load More" alt="Load More">
+                ...
+            </a>
+        </li>
+        <li data-ng-class="{disabled:!navigators.next.state}">
+            <a href="javascript:void(0);" aria-label="Next" data-ng-click="next()">
+                <span aria-hidden="true">»</span>
+            </a>
+        </li>
+    </ul>
+</nav>

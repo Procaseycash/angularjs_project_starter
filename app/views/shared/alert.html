@@ -1,0 +1,6 @@
+<!-- Alert template for displaying alerts within the application-->
+
+<div  id="appAlert" class="{{alert.class_value}}" role="alert">
+  <a href="javascript:void(0)" class="close" ng-click="closeAlert()">&times;</a>
+  <span class="alert-header"><i class="{{alert.fa}}" aria-hidden="true"></i>&nbsp;{{alert.header}}</span> {{alert.message}}
+</div>
