@@ -88,4 +88,4 @@
          bower.json (script that load all dependencies installed)
          package.json (script that load all npm dependencies installed)
         
-        and all other files are very important, please do not delete.
+        and all other files are important but you can decide to check file usage before deleting some of the files in shared folders but you will surely find them useful.
