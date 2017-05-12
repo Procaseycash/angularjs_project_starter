@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "npm install && bower install"
+    "setup": "npm install && bower install",
+     "start": "gulp serve"
   },
   "repository": {
     "type": "git",

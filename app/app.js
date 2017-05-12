@@ -3,23 +3,24 @@
  */
 'use strict';
 // Declare app level module which depends on views, and components
-var efiweWeb=angular.module('efiweWeb', ['ui.router','cacheModule','angular-loading-bar','indexModule','interceptorModule']);
+var appWebStarter=angular.module('appWebStarter', ['ui.router','cacheModule','angular-loading-bar','indexModule','interceptorModule']);
 
 /**
  *
  * Handling for page processing before display
  *
  */
-efiweWeb.run(["$rootScope", "$state", 'Cache',function ($rootScope, $state,Cache) {
+appWebStarter.run(["$rootScope", "$state", 'Cache',function ($rootScope, $state,Cache) {
     $rootScope.$on('$stateChangeStart', function (event, to,current) {
       console.log('current=',current,'to=',to['url']);
     });
 }]);
 
 
-efiweWeb.config(['$stateProvider', '$urlRouterProvider','cfpLoadingBarProvider','$httpProvider','$locationProvider',
+appWebStarter.config(['$stateProvider', '$urlRouterProvider','cfpLoadingBarProvider','$httpProvider','$locationProvider',
     function ($stateProvider, $urlRouterProvider,cfpLoadingBarProvider,$httpProvider,$locationProvider) {
     $httpProvider.interceptors.push('interceptRequest'); //adding header to request sent.
+    $urlRouterProvider.when('','/');
     $urlRouterProvider.otherwise("/page-not-found");
     $locationProvider.hashPrefix('');
 
@@ -55,7 +56,7 @@ efiweWeb.config(['$stateProvider', '$urlRouterProvider','cfpLoadingBarProvider',
      */
 
 }]);
-efiweWeb.controller('efiweWebCtrl',['$scope','$rootScope','Cache','$state','$window',function ($scope,$rootScope,Cache,$state,$window) {
+appWebStarter.controller('appWebStarterCtrl',['$scope','$rootScope','Cache','$state','$window',function ($scope,$rootScope,Cache,$state,$window) {
 
     /**
      * Setting copyright year

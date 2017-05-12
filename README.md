@@ -39,7 +39,7 @@
         #
         #
         #Run on CLI
-            Just type ‘gulp serve’ and then open your browser and copy paste the link you see to start up the app.
+            Just type ‘gulp serve’ or 'npm start' and then open your browser and copy paste the link you see to start up the app.
         
         #Create Compiled, compressed and uglify app version.
         #
