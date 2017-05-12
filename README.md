@@ -8,7 +8,7 @@
             npm install -g gulp (for global installation of gulp then open the project root folder and then do)
             npm install (to start up and setup the project for development and then do).
             bower install (to set up the project for development web dependencies, then do)
-            gulp serve (You will see the local running of the app at localhost:8000/#/, copy the link and paste in browser)
+            gulp serve or npm start (You will see the local running of the app at localhost:8000/#/, copy the link and paste in browser)
         #
         #Install Bower Dependencies You might need
         #on project root folder, open a CLI and type:
