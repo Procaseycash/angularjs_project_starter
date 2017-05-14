@@ -47,20 +47,42 @@ gulp.task('htmlMin', function() {
         .pipe(gulp.dest('build/views/'));
 });
 
-
 // minify our js and css files
-gulp.task('jsCssMin', function() {
-    return  gulp.src(['app/*.html'])
+gulp.task('HtmlJsCssMinMove', function() {
+    return  gulp.src(['!app/scripts/*min.js','!app/bower_components/*min.js','app/*.html'])
         .pipe(useref())
-        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif(['*.js'], uglify()))
         .pipe(gulpif('*.css', minifyCSS()))
+        .pipe(gulp.dest('build'));
+});
+
+
+//Uglify & moved main js and concat
+gulp.task('mainMinJs', function() {
+    return  gulp.src(['build/js/main.js'])
+        .pipe(uglify())
+        /*.pipe(concat('js/main.js'))*/
+        .pipe(gulp.dest('build/js'));
+});
+
+//Uglify moved vendors js and concat
+gulp.task('vendorsMinJs', function() {
+    return  gulp.src(['build/js/vendors.js'])
+        .pipe(uglify())
+        .pipe(gulp.dest('build/js'));
+});
+
+//Move minify js
+gulp.task('moveMinJs', function() {
+    return  gulp.src(['app/bower_components/dcjqaccordion/js/*min.js','app/bower_components/jquery.nicescroll/dist/*min.js',,'app/bower_components/raphael/*min.js','app/scripts/**/*min.js'])
+        .pipe(concat('js/vendorsMin.js'))
         .pipe(gulp.dest('build'));
 });
 
 
 //to remove all log from file and concatenate back to file
 gulp.task('removeLog', function() {
-   return  gulp.src('build/js/main.js')
+    return  gulp.src('build/js/main.js')
         .pipe(stripDebug())
         .pipe(concat('js/main.js'))
         .pipe(gulp.dest('build'));
@@ -81,7 +103,7 @@ gulp.task('clean', function () {
 
 //inject bower component into our app for us
 gulp.task('wiredep', function() {
-  return  gulp.src('app/*.html')
+    return  gulp.src('app/*.html')
         .pipe(wiredep())
         .pipe(gulp.dest('app'))
         .pipe(connect.reload());
@@ -89,10 +111,10 @@ gulp.task('wiredep', function() {
 
 //watch our files for changes for us
 gulp.task('watch',function () {
-   gulp.watch(['app/**/*.*'],function () {
-       gulp.src('./app/**/*.*')
-         .pipe(connect.reload());
-   });
+    gulp.watch(['app/**/*.*'],function () {
+        gulp.src('./app/**/*.*')
+            .pipe(connect.reload());
+    });
 });
 
 //help to connect our development to a server
@@ -120,7 +142,7 @@ gulp.task('default',['wiredep']);
 
 //final build for production jsMin
 gulp.task('build', function (callback) { //uploadsMove
-runSequence('clean','imageMin', 'copyFonts','jsCssMin', 'htmlMin','removeLog',callback);
+    runSequence('clean','imageMin', 'copyFonts','HtmlJsCssMinMove','mainMinJs','vendorsMinJs','moveMinJs','htmlMin','removeLog',callback);
 });
 
 //help to serve our files for use

@@ -1,0 +1,30 @@
+<!--<script>
+    /**
+     * This is to scroll to top of the page
+     */
+
+    $(function () {
+        $('#sidebar').find('a').on('click', function (ev) {
+            var height = $(window).scrollTop();
+            if(height  > 0) {
+                $('html, body').animate({
+                    scrollTop: $(".right_col").offset().top
+                }, 1000);
+            }
+        });
+    });
+
+    /**
+     * This is to scroll to top of the page
+     */
+    $('footer').find('a').on('click', function (ev) {
+        var height = $(window).scrollTop();
+        if(height  > 0) {
+            $('html, body').animate({
+                scrollTop: $(".right_col").offset().top
+            }, 1000);
+        }
+    });
+
+</script>-->
+<div data-ng-init="$parent.dashboardTemplateLoader()"></div>

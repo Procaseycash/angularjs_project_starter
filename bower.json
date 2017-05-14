@@ -34,7 +34,16 @@
     "bootstrap-daterangepicker": "^2.1.25",
     "pdfmake": "^0.1.27",
     "bootstrap-progressbar": "^0.9.0",
-    "iCheck": "^1.0.2"
+    "iCheck": "^1.0.2",
+    "jquery.gritter": "^1.7.4",
+    "dcjqaccordion": "^2.7.1",
+    "jquery.scrollTo": "^2.1.2",
+    "jquery.nicescroll": "^3.6.8",
+    "morris.js": "morrisjs#^0.5.1",
+    "fullcalendar": "^3.4.0",
+    "fancybox": "^3.0.47",
+    "chart.js": "^2.5.0",
+    "angular-bootstrap": "^2.5.0"
   },
   "overrides": {
     "bootstrap": {
@@ -58,6 +67,17 @@
       "main": [
         "css/bootstrap-progressbar-3.3.4.css",
         "bootstrap-progressbar.js"
+      ]
+    },
+    "jquery.nicescroll": {
+      "main": [
+        "dist/jquery.nicescroll.min.js"
+      ]
+    },
+    "fancybox": {
+      "main": [
+        "dist/jquery.fancybox.js",
+        "dist/jquery.fancybox.css"
       ]
     }
   },

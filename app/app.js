@@ -3,7 +3,7 @@
  */
 'use strict';
 // Declare app level module which depends on views, and components
-var appWebStarter=angular.module('appWebStarter', ['ui.router','cacheModule','angular-loading-bar','indexModule','interceptorModule']);
+var appWebStarter=angular.module('appWebStarter', ['ui.router','dashboardModule','cacheModule','angular-loading-bar','indexModule','interceptorModule']);
 
 /**
  *
@@ -35,26 +35,46 @@ appWebStarter.config(['$stateProvider', '$urlRouterProvider','cfpLoadingBarProvi
   });
 
 
-    /**
-     * Start miscellaneous in application
-     */
+        /**
+         *   State for dashboard. This is the dashboard page.
+         */
+        $stateProvider.state('dashboard', {
+            url: "/dashboard",
+            templateUrl: 'views/dashboard/dashboard.html',
+            controller: 'dashboardCtrl',
+            controllerAs:'vm'
+        });
+        /**
+         * End State for dashboard. This is the dashboard page.
+         */
 
-    $stateProvider.state('page-not-found',{
-        url:'/page-not-found',
-        templateUrl: 'views/miscellaneous/page_not_found.html'
-    });
 
-    $stateProvider.state('forget-password',{
-        url:'/forget-password',
-        templateUrl: 'views/miscellaneous/forget_password.html',
-        controller: 'forgetPasswordCtrl',
-        controllerAs:'vm'
-    });
+        /**
+         * Start miscellaneous in application
+         */
 
-    /**
-     * End miscellaneous process in application
-     */
+        $stateProvider.state('page-not-found',{
+            url:'/page-not-found',
+            templateUrl: 'views/miscellaneous/page_not_found.html'
+        });
 
+        $stateProvider.state('forget-password',{
+            url:'/forget-password',
+            templateUrl: 'views/miscellaneous/forget_password.html',
+            controller: 'forgetPasswordCtrl',
+            controllerAs:'vm'
+        });
+
+        $stateProvider.state('verify-account',{
+            url:'/account-verification/:applicantToken',
+            templateUrl: 'views/miscellaneous/verify_account.html',
+            controller: 'verifyAccountCtrl',
+            controllerAs:'vm'
+        });
+
+        /**
+         * End miscellaneous process in application
+         */
 }]);
 appWebStarter.controller('appWebStarterCtrl',['$scope','$rootScope','Cache','$state','$window',function ($scope,$rootScope,Cache,$state,$window) {
 
@@ -101,6 +121,12 @@ appWebStarter.controller('appWebStarterCtrl',['$scope','$rootScope','Cache','$st
           TCounter=setTimeout($scope.logout, inActive);
       });
   });
-    
+
+    /**
+     * This is used to load the script for dashboard template
+     */
+    $scope.dashboardTemplateLoader=function () {
+        dashboardTemplate();
+    };
 
 }]);

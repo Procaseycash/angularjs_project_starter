@@ -17,6 +17,7 @@
   <meta name="google" content="translate">
   <meta name="revisit-after" content="1 month">
   <!-- build:css css/main.css-->
+
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
@@ -26,10 +27,17 @@
   <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css" />
   <link rel="stylesheet" href="bower_components/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.css" />
   <link rel="stylesheet" href="bower_components/iCheck/skins/flat/blue.css" />
+  <link rel="stylesheet" href="bower_components/jquery.gritter/css/jquery.gritter.css" />
+  <link rel="stylesheet" href="bower_components/morris.js/morris.css" />
+  <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css" />
+  <link rel="stylesheet" href="bower_components/fancybox/dist/jquery.fancybox.css" />
   <!--endbower-->
+
   <!--custom:css-->
+  <link rel="stylesheet" href="styles/dashboard_template.css">
   <link rel="stylesheet" href="app.css">
-  <!-- endcustom  css-->
+  <!-- endcustom css-->
+
   <!-- endbuild -->
   <link rel="shortcut icon" href="images/efiwe.ico" type='image/x-icon'/>
   <link rel="icon" href="images/efiwe.ico" type="image/x-icon"/>
@@ -61,12 +69,30 @@
   <script src="bower_components/pdfmake/build/vfs_fonts.js"></script>
   <script src="bower_components/bootstrap-progressbar/bootstrap-progressbar.js"></script>
   <script src="bower_components/iCheck/icheck.js"></script>
+  <script src="bower_components/jquery.gritter/js/jquery.gritter.js"></script>
+  <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+  <script src="bower_components/dcjqaccordion/js/jquery.dcjqaccordion.2.7.min.js"></script>
+  <script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
+  <script src="bower_components/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
+  <script src="bower_components/eve-raphael/eve.js"></script>
+  <script src="bower_components/raphael/raphael.min.js"></script>
+  <script src="bower_components/mocha/mocha.js"></script>
+  <script src="bower_components/morris.js/morris.js"></script>
+  <script src="bower_components/fullcalendar/dist/fullcalendar.js"></script>
+  <script src="bower_components/fancybox/dist/jquery.fancybox.js"></script>
+  <script src="bower_components/chart.js/dist/Chart.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
 
+  <!-- build:js js/vendorsMin.js-->
+  <script type="text/javascript"></script>
+  <!-- endbuild -->
+
   <!-- build:js js/main.js-->
   <!-- code inclusion-->
+
   <!--Load all Shared Library-->
   <script src="scripts/shared/ApiHandler.js"></script>
   <script src="scripts/shared/checkEmail.js"></script>
@@ -82,12 +108,21 @@
   <script src="scripts/shared/textCapitalize.js"></script>
   <script src="scripts/shared/encryption.js"></script>
   <script src="scripts/shared/interceptors.js"></script>
-  <!--Load all Shared Library-->
+  <!--End Load all Shared Library-->
+
   <!--Load all working script-->
   <script src="scripts/index.js"></script>
   <script src="scripts/login/login.js"></script>
+  <script src="scripts/profile/profile.js"></script>
+  <script src="scripts/miscellaneous/miscellaneous.js"></script>
+  <!--End Load all working script-->
 
-  <!--Load all working script-->
+  <!--this below script must be the last. do not add script below it. -->
+  <script src="scripts/bootstrap-inputmask.min.js"></script>
+  <script src="scripts/dashboard_template.js"></script>
+  <script src="scripts/dashboard/dashboard_view.js"></script>
+  <script src="scripts/dashboard/sidebar.js"></script>
+  <script src="scripts/dashboard/dashboard.js"></script>
   <script src="app.js"></script>
   <!--end inclusion -->
   <!-- endbuild -->

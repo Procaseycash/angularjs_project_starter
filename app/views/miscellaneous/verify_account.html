@@ -1,0 +1,32 @@
+<style>
+    html,body{
+        background: #172D44;
+        margin:0;
+        padding:0;
+        height: 100vh;
+    }
+</style>
+<div style="height:auto;"></div>
+<div style="background: #993366;  position: absolute; top:0; height:13px; width:100%">&nbsp;</div>
+<div class="login-container">
+    <div class="col-sm-offset-4 col-xs-12 col-md-4 col-sm-4">
+        <div class="login-box">
+            <div class="login-body  animated fadeInDown">
+                <div id="messageVerify" class="callout callout-info bg-info" style="color:#000;">
+                    <div class="text-center">
+                        <token-msg visible='vm.visible.opener' message="vm.visible.message"></token-msg>
+                    </div>
+                </div>
+            </div>
+            <div class="login-footer">
+                <div class="col-sm-6 col-xs-12 col-md-6 no-padding text-left">
+                    <a role="button" data-ui-sref="home" >&copy; {{$parent.creation}} ScreeningManager</a>
+                </div>
+                <div class="col-sm-6 col-xs-12 col-md-6 no-padding text-right">
+                    <a role="button">K-Devs System Solutions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>

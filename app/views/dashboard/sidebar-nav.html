@@ -1,0 +1,22 @@
+<aside>
+    <div id="sidebar"  class="nav-collapse ">
+        <!-- sidebar menu start-->
+
+     <ul class="sidebar-menu"  id="nav-accordion">
+            <p class="centered"><a href="profile.html"><img src="images/kazeem.jpg" class="img-circle" width="60"></a></p>
+            <h5 class="centered">Kazeem Olanipekun</h5>
+
+            <li class="mt">
+                <a class="active" href="index.html">
+                    <i class="fa fa-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+         <div data-ng-repeat="(i,userRole) in $parent.user.roles">
+             <sm-side-bar role="userRole" pause="i"></sm-side-bar>
+         </div>
+        </ul>
+
+        <!-- sidebar menu end-->
+    </div>
+</aside>
