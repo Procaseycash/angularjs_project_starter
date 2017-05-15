@@ -49,6 +49,20 @@ appWebStarter.config(['$stateProvider', '$urlRouterProvider','cfpLoadingBarProvi
          */
 
 
+        /***
+         * Login Page
+         */
+        $stateProvider.state('login', {
+            url: "/login",
+            templateUrl: 'views/login/login.html',
+            controller: 'loginCtrl',
+            controllerAs:'vm'
+        });
+        
+        /***
+         * End Login Page
+         */
+
         /**
          * Start miscellaneous in application
          */
@@ -76,6 +90,7 @@ appWebStarter.config(['$stateProvider', '$urlRouterProvider','cfpLoadingBarProvi
          * End miscellaneous process in application
          */
 }]);
+
 appWebStarter.controller('appWebStarterCtrl',['$scope','$rootScope','Cache','$state','$window',function ($scope,$rootScope,Cache,$state,$window) {
 
     /**
@@ -95,8 +110,8 @@ appWebStarter.controller('appWebStarterCtrl',['$scope','$rootScope','Cache','$st
      * This is used to logout user from application
      */
     $scope.logout=function () {
-        Cache.unset('user');
-        //$state.go('login');
+        //Cache.unset('user');
+        $state.go('login');
     };
 
     /**

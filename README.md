@@ -63,6 +63,12 @@
         #ApiHandler:
         #This is the handler that will help in creating request to fro the app to the backend apis. sample of usage can be found in index.js in views folder.
         #
+
+        #
+        # SideBar Structure
+        #   The Sidebar is has sidebar.js in views/dashboard and scripts/dashboard, The sidebar is developed to work in a role based approach in which in turn inject the user features based on his/her role. You will find a some files having '-nav' in views/dashboard which are sidebar injected based on role and you can edit to suit what type role you wanna add, before doing that, make sure you change the filepath in scripts/dashboard/sidebar.js on the directive created for sidebar injection. You will find user object example in dashboard.js. feel free to study and understand it to get your project started.
+        #
+        #
         #Project Structure with MVC Pattern:
         
                 AngularJs_Project_Starter-frontend

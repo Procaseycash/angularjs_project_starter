@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -11,15 +11,16 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#services">SERVICES</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#pricing">PRICING</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a data-ng-click="loadWithPage('#about')" role="button">ABOUT</a></li>
+                <li><a data-ng-click="loadWithPage('#services')" role="button">SERVICES</a></li>
+                <li><a data-ng-click="loadWithPage('#portfolio')" role="button">PORTFOLIO</a></li>
+                <li><a data-ng-click="loadWithPage('#pricing')" role="button">PRICING</a></li>
+                <li><a data-ng-click="loadWithPage('#contact')" role="button">CONTACT</a></li>
+                <li><a role="button" data-ui-sref="login" data-toggle="link">LOGIN</a></li>
             </ul>
         </div>
     </div>
-</nav>
+</div>
 
 <div class="jumbotron text-center">
     <h1>Company</h1>
@@ -267,7 +268,7 @@
     <a role="button" title="To Top">
         <span class="glyphicon glyphicon-chevron-up"></span>
     </a>
-    <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+    <p>Bootstrap Theme Loaded By <a href="https://www.facebook.com/kezy.olanipekun" title="Visit my facebook">Kazeem Olanipekun</a></p>
 </footer>
 
 <script>

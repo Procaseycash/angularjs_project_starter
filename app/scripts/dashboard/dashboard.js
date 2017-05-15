@@ -2,7 +2,7 @@
  * Created by Kazeem Olanipekun <kezyolanipekun@gmail.com> <08135061846> on 13/05/2017.
  */
 'use strict';
-var dashboard=angular.module('dashboardModule',['SidebarModule','ApiHandlerModule','cacheModule','profileModule','miscellaneousModule','ui.bootstrap','dashboardViewModule']);
+var dashboard=angular.module('dashboardModule',['SidebarModule','ApiHandlerModule','cacheModule','profileModule','miscellaneousModule','ui.bootstrap','dashboardViewModule','loginModule']);
 dashboard.controller('dashboardCtrl',['$scope','ApiHandler','Cache','$state','$q','$rootScope','$uibModal',
     function($scope,ApiHandler,Cache,$state,$q,$rootScope,$uibModal){
 console.log('this is dashboard');
